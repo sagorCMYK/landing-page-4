@@ -2,84 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet Hot Singles Near You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔥 Hot Offers Near You</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
       color: #fff;
-      text-align: center;
     }
+
     .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 0 20px;
-    }
-    .content {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 15px;
-      max-width: 400px;
+      max-width: 480px;
+      margin: auto;
+      padding: 20px;
       text-align: center;
-      backdrop-filter: blur(10px);
     }
-    .warning {
-      background-color: #ff3366;
-      color: white;
-      font-size: 14px;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
+
+    .geo-text {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 10px;
     }
+
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ff5b8d;
+      margin-bottom: 10px;
     }
-    p {
+
+    .countdown {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ff4d6d;
+  background: #1f1f1f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+}
+    
+
+    .offer-box {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 91, 141, 0.2);
+    }
+
+    .offer-title {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      color: #ff80a9;
     }
-    .cta-button {
-      background-color: #ff3366;
-      color: white;
-      padding: 15px 30px;
+
+    .cta-btn {
+      background: linear-gradient(to right, #ff0055, #ff7ba9);
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 16px;
+      color: #fff;
       text-decoration: none;
-      font-size: 18px;
-      border-radius: 10px;
       display: inline-block;
-      transition: background-color 0.3s;
+      transition: 0.3s ease;
     }
-    .cta-button:hover {
-      background-color: #e6004c;
+
+    .cta-btn:hover {
+      background: linear-gradient(to right, #ff3366, #ff99b2);
     }
-    .disclaimer {
+
+    .push-box {
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 25px;
+      color: #ddd;
       font-size: 14px;
-      opacity: 0.7;
-      margin-top: 20px;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { border: 2px solid #ff5b8d; }
+      100% { border: 2px solid #ff9fbf; }
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 30px;
     }
   </style>
+
+  <!-- Countdown Script -->
+  <script>
+    let countdownTime = 60; // 1 minutes
+    function startCountdown() {
+      const timer = setInterval(() => {
+        let minutes = Math.floor(countdownTime / 60);
+        let seconds = countdownTime % 60;
+        document.getElementById("countdown").textContent =
+          `⚡ Limited-time offers disappear in ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        countdownTime--;
+        if (countdownTime < 0) {
+          clearInterval(timer);
+          window.location.href = "https://t.mbdaad.link/134119/3788/0?aff_sub=Fallback&bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN"; // Redirect fallback
+        }
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
+
+  <!-- Geo Location Script -->
+  <script>
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("geo").textContent = "🔥 Hot offers for users in " + data.city + "!";
+      })
+      .catch(() => {
+        document.getElementById("geo").textContent = "🔥 Hot offers available in your area!";
+      });
+  </script>
+
+  <!-- Back Button Redirect -->
+  <script>
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      location.href = "https://t.mbdaad.link/134119/3788/0?aff_sub=Fallback&bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN"; // Redirect if back is pressed
+    };
+  </script>
 </head>
 <body>
-
   <div class="container">
-    <div class="content">
-      <div class="warning">🔞 18+ WARNING: Adult Content</div>
-      <h1>🔥 Meet Hot Singles Near You</h1>
-      <p>Thousands are ready to connect. Are you 18+ and ready to chat?</p>
-      <a href="https://t.mbdaad.link/134119/3785/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN" class="cta-button">Yes, I am 18+ – Enter Now</a>
-      <p class="disclaimer">*This is an advertisement. You must be 18 or older to continue.</p>
+    <div class="geo-text" id="geo">Loading location…</div>
+    <h1>Explore Your Naughty Side 😈</h1>
+    <div class="countdown" id="countdown">Loading timer…</div>
+
+    <!-- Offer 1 -->
+    <div class="offer-box">
+      <div class="offer-title">💘 Local Singles Want You</div>
+      <a href="https://t.mbdaad.link/134119/3785/0?aff_sub=Dating&bo=2753,2754,2755,2756&target=pushnotifications&po=6456&aff_sub5=SF_006OG000004lmDN" class="cta-btn">Chat Now</a>
     </div>
-</div>
 
+    <!-- Offer 2 -->
+    <div class="offer-box">
+      <div class="offer-title">📸 Watch Live Girls Tonight</div>
+      <a href="https://t.acrsmartcam.com/134119/3664/0?aff_sub=LiveCam&bo=2779,2778,2777,2776,2775&target=pushnotifications&po=6533&aff_sub5=SF_006OG000004lmDN" class="cta-btn">Watch Live</a>
+    </div>
 
-</div>
-<script defer src=https://www.cemiocw.com/im_jerky?&lang=en&mode=prerecorded&outlinkUrl=https://t.mbdaad.link/134119/3785/0?bo=Array&target=pushnotifications&file_id=252177&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0018></script>
-</div>
+    <!-- Offer 3 -->
+    <div class="offer-box">
+      <div class="offer-title">🎮 Play 18+ Adult Games</div>
+      <a href="https://t.slext1.com/134119/9403/0?aff_sub=Game&target=pushnotifications&aff_sub5=SF_006OG000004lmDN" class="cta-btn">Play Now</a>
+    </div>
+
+    <!-- Fake Push Prompt -->
+    <div class="push-box">
+      🔔 Allow notifications to get real-time updates from girls near you!
+    </div>
+
+    <div class="footer">
+      This site contains adult content for 18+ users only. Viewer discretion is advised.
+    </div>
+  </div>
+  <script defer src=https://www.cemiocw.com/im_jerky?&lang=en&mode=prerecorded&outlinkUrl=https://t.mbdaad.link/134119/3788/0?bo=3471%2C3472%2C3473%2C3474%2C3475&target=pushnotifications&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0018></script>
 </body>
 </html>
